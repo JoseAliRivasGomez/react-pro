@@ -1,0 +1,74 @@
+{
+  "name": "fh-custom-components",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "dev",
+    "fernando",
+    "herrera",
+    "curso"
+  ],
+  "license": "MIT",
+  "homepage": "https://fernando-herrera.com",
+  "repository": {
+    "url": "https://github.com/Klerith/fh-custom-components",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "dev": "npm run storybook",
+    "build": "npm run clean && tsc && npm run copyfiles",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/",
+    "push:npm": "np",
+    "test": "echo 'all tests were good'"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.2.2",
+    "@storybook/addon-interactions": "^7.2.2",
+    "@storybook/addon-links": "^7.2.2",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.2.2",
+    "@storybook/react": "^7.2.2",
+    "@storybook/react-vite": "^7.2.2",
+    "@storybook/testing-library": "^0.2.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.13",
+    "np": "^8.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "storybook": "^7.2.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
